@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Susmitha's Portfolio - Web Developer and BCA Student">
+    <meta name="keywords" content="Susmitha, BCA, Web Developer, HTML, CSS, JavaScript, Portfolio">
+    <meta name="author" content="Susmitha">
+    <meta property="og:title" content="Susmitha's Portfolio">
+    <meta property="og:description" content="Explore my projects, skills, and get in touch with me.">
+    <meta property="og:image" content="link_to_your_image.jpg">
+    <meta property="og:url" content="http://yourwebsite.com">
+    <title>Susmitha's Portfolio</title>
+    
+    <style>
+        body {
+            background-color: #8c7bac; /* Updated background color */
+            color: rgb(156, 18, 18);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header, footer {
+            background-color: #072c4b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a, footer a {
+            color: rgb(206, 40, 40);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header a:hover, footer a:hover {
+            color: #073f52;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .intro img {
+            border-radius: 50%;
+            border: 5px solid #072035;
+            width: 150px;
+            height: 150px;
+        }
+
+        .intro h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #0e283d;
+        }
+
+        .intro h2 {
+            margin: 20px 0;
+            color: rgb(71, 12, 12);
+            font-weight: normal;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            color: rgb(68, 15, 15);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: rgb(83, 11, 11);
+            font-size: 1.5em;
+        }
+
+        .social-icons a:hover {
+            color: #0b3e68;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .button-container button {
+            background-color: #093152;
+            color: rgb(240, 208, 208);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #0c215f;
+            color: rgb(230, 26, 26);
+        }
+
+        .contact-page {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info, .contact-form {
+            width: 45%;
+        }
+
+        h3 {
+            color: #0c3a5f;
+        }
+
+        a {
+            color: #083961;
+            text-decoration: none;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #5295cc;
+            background-color: rgb(219, 72, 72);
+            color: rgb(29, 27, 27);
+        }
+
+        button[type="submit"] {
+            background-color: #80b6e2;
+            color: rgb(8, 7, 7);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #8ba3eb;
+            color: rgb(224, 48, 48);
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: rgb(240, 146, 146);
+        }
+
+        .about-content, .resume-content {
+            padding: 50px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h1, .resume-content h1 {
+            color: #104068;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .about-content p, .resume-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px auto;
+        }
+
+        .resume img {
+            border-radius: 50%;
+            border: 5px solid #074170;
+            width: 150px;
+            height: 150px;
+            position:relative
+
+        }
+
+
+        .resume-section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .resume-section h2 {
+            color: #093961;
+            font-size: 1.8em;
+            border-bottom: 2px solid #cf2466;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .resume-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .skill-box {
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #09095a;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .skill-title {
+            color: #185586;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .skill-level {
+            background-color: rgb(199, 12, 12);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .skill-percentage {
+            height: 100%;
+            background-color: #4682b4;
+            border-radius: 10px;
+        }
+
+        .resume-Personal-info, .resume-Hobbies, .resume-Passions, .resume-Experience, .resume-Education {
+            background-color: #0f0f75;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .resume-Personal-info h3, .resume-Hobbies h3, .resume-Passions h3, .resume-Experience h3, .resume-Education h3 {
+            color: #073255;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .resume-Personal-info ul, .resume-Hobbies ul, .resume-Passions ul, .resume-Experience ul, .resume-Education ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 1.2em;
+        }
+
+        .resume-Personal-info li, .resume-Hobbies li, .resume-Passions li, .resume-Experience li, .resume-Education li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#intro">Home</a>
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="intro" id="intro">
+        <img src="susmitha.jpg" alt="Susmitha's Profile Picture">
+        <h1>Hello, it's Me</h1>
+        <h2>SUSMITHA</h2>
+        <p>I'm currently pursuing BCA at MIET College. Skilled in various technologies and passionate about coding.</p>
+
+        <div class="button-container">
+            <button onclick="window.location.href='#resume'">View Resume</button>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/public-profile/settings" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/susmitha_27_04/" target="_blank" aria-label="instagaram"><i class="fab fa-instagram"></i></a>
+            <a href="" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <div class="about-content" id="about">
+        <h1>About Me</h1>
+        <p>
+            I am Susmitha, a web developer with a passion for creating innovative and efficient web solutions. Currently pursuing a Bachelor of Computer Applications (BCA) at MIET College, I have honed my skills in various web technologies including HTML, CSS, JavaScript, and React.
+        </p>
+        <p>
+            My journey into web development began with a keen interest in technology and a desire to solve real-world problems. Over the years, I have developed a solid understanding of both front-end and back-end technologies. I am particularly interested in creating responsive and user-friendly interfaces.
+        </p>
+        <p>
+            In addition to my technical skills, I am a quick learner and a dedicated team player. I enjoy working on collaborative projects and am always eager to take on new challenges that push the boundaries of my knowledge and abilities.
+        </p>
+    </div>
+
+    <div class="resume-content" id="resume">
+        <h1>Resume</h1>
+
+        <div class="resume-section">
+            <embed img src="resume.jpg" alt="Profile Photo" width=300px height=300px>
+            </div>
+            <h2>Skills</h2>
+            <div class="skill-box">
+                <div class="skill-title">HTML</div>
+                <div class="skill-level">
+                    <div class="skill-percentage" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">CSS</div>
+                <div class="skill-level">
+                    <div class="skill-percentage" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">JavaScript</div>
+                <div class="skill-level">
+                    <div class="skill-percentage" style="width: 83%;"></div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">python</div>
+                <div class="skill-level">
+                    <div class="skill-percentage" style="width: 75%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-section resume-personal-info">
+            <h2>Personal Information</h2>
+            <h3>Contact Information</h3>
+            <ul>
+                <li>Email: <a href="mailto susmithabalakrishnan27@gmail.com">susmitha@example.com</a></li>
+                <li>Phone: +91 7904599212</li>
+                <li>Address: 5/412, Sellemuthupuram, Thiruvalarchipatti, Trichy district, India</li>
+            </ul>
+        </div>
+
+        <div class="resume-section resume-experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>Intern at AICTE - Assisted with front-end development and bug fixes.</li>
+                <li>Freelance Web Developer - Worked on various projects including e-commerce sites and personal blogs.</li>
+            </ul>
+        </div>
+
+        <div class="resume-section resume-education">
+            <h2>Education</h2>
+            <ul>
+                <li>Bachelor of Computer Applications (BCA) - MIET College, Expected 2025</li>
+                <li>High School - Adharsh matric hiegher secondary  School nagapattinam, Graduated 2021</li>
+            </ul>
+        </div>
+
+        <div class="resume-section resume-hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Coding</li>
+                <li>Drawing</li>
+                <li>painting</li>
+            </ul>
+        </div>
+
+        <div class="resume-section resume-passions">
+            <h2>Passions</h2>
+            <ul>
+                <li>Software Development</li>
+                <li>Technology Trends</li>
+                <li>Open Source Projects</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contact-page" id="contact">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>If you'd like to get in touch, please feel free to contact me through the following methods:</p>
+            <ul>
+                <li>Email: <a href="mailto susmithabalakrishnan27@gmail.com">susmithabalakrishnan27@gmail.com</a></li>
+                <li>Phone: +91 7904599212</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/public-profile/settings" target="_blank">linkedin.com/in/susmitha</a></li>
+            </ul>
+        </div>
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <form action="submit_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SUSMITHA. All Rights Reserved.</p>
+        <p>Created with <a href="" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+
+</html>
